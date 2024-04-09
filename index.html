@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Котики</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Кошкин дом</h1>
+  </header>
+
+  <div class="container">
+    <div id="catList" class="cat-list">
+      
+    </div>
+
+    <form id="addCatForm" class="add-cat-form">
+      <h2>Добавить котика:</h2>
+      <div class="form-group">
+        <label for="catId">ID котика:</label>
+        <input type="text" id="catId" required>
+      </div>
+
+      <div class="form-group">
+        <label for="catName">Имя:</label>
+        <input type="text" id="catName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="catImage">Ссылка на изображение:</label>
+        <input type="text" id="catImage" required>
+      </div>
+
+      <div class="form-group">
+        <label for="catAge">Возраст:</label>
+        <input type="number" id="catAge" required>
+      </div>
+
+      <div class="form-group">
+        <label for="catRate">Оценка:</label>
+        <input type="number" id="catRate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="catFavorite">Избранный:</label>
+        <input type="checkbox" id="catFavorite">
+      </div>
+
+      <div class="form-group">
+        <label for="catDescription">Описание:</label>
+        <textarea id="catDescription" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="btn">Добавить котика</button>
+    </form>
+  </div>
+
+  <!-- Модальное окно для изменения котика -->
+  <div id="editModal" class="modal">
+    <h2>Изменить котика</h2>
+    <div class="form-group">
+      <label for="editCatId">ID котика:</label>
+      <input type="text" id="editCatId" disabled>
+    </div>
+
+    <div class="form-group">
+      <label for="editCatName">Имя:</label>
+      <input type="text" id="editCatName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="editCatImage">Ссылка на изображение:</label>
+      <input type="text" id="editCatImage" required>
+    </div>
+
+    
+    <div class="form-group">
+      <label>Предпросмотр изображения:</label>
+      <img id="editCatImgPreview" src="" alt="Изображение котика" style="max-width: 200px;">
+    </div>
+
+    <div class="form-group">
+      <label for="editCatAge">Возраст:</label>
+      <input type="number" id="editCatAge" required>
+    </div>
+
+    <div class="form-group">
+      <label for="editCatRate">Оценка:</label>
+      <input type="number" id="editCatRate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="editCatFavorite">Избранный:</label>
+      <input type="checkbox" id="editCatFavorite">
+    </div>
+
+    <div class="form-group">
+      <label for="editCatDescription">Описание:</label>
+      <textarea id="editCatDescription" rows="4"></textarea>
+    </div>
+
+    <button id="saveEditBtn" class="btn">Сохранить</button>
+    <button id="closeEditBtn" class="btn">Закрыть</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
